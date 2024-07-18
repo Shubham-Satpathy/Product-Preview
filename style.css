@@ -1,74 +1,86 @@
-@font-face {
-    font-family: 'Figtree';
-    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format(truetype);
+*{
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
 }
 body{
-    display: flex;
-    background-color: hsl(47, 88%, 63%);
+    background-color: hsl(30, 38%, 92%);
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height:100vh;
-    font-family:'Figtree',sans-serif;
-    margin:0;
 }
-
+#mobile{
+    display: none;
+}
 .container{
+    width: 640px;
+    display:flex;
+    justify-content: center;
     background-color: hsl(0, 0%, 100%);
-    width:320px;
-    border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 10px 10px;
-    padding: 15px;
 }
-
-svg{
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 15px;
+.content{
+    padding: 30px;
 }
-
-.tag{
-    display: inline;
-    padding:5px 10px;
-    background-color: hsl(47, 88%, 63%);
-    border-radius: 5px;
-    font-weight: 800;
-}
-
-.publish{
-    margin-top: 15px;
-    font-size: 14px;
-    font-weight: 100;
-}
-
-.heading{
-    margin:15px 0px;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-a:hover{
-    color:hsl(47, 88%, 63%);
-}
-
-.info{
-    color:hsl(0, 0%, 50%);
-    margin-bottom: 15px;
-}
-
-.instructor{
-    display: flex;
-    align-items: center;
-    font-weight: 800;
-}
-
 img{
-    width: 30px;
-    margin-right: 10px;
+    width: 320px;
+    border-radius: 10px 0 0 10px;
+}
+.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+#tag{
+    color: white;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.price{
+    display: flex;
+    margin: 20px 0;
+}
+.actual{
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 20px;
+    color: hsl(158, 36%, 37%);
+}
+.previous{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+.catagory{
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 2px;
+}
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Fraunces',sans-serif;
+    margin: 10px 0;
+    color:hsl(212, 21%, 14%);
+}
+.info{
+    color: hsl(228, 12%, 48%);
+    font-size: 16px;
+}
+@media (max-width:650px) {
+    img{
+        display:none;
+    }
+    .container{
+        width:90%;
+        flex-direction: column;
+    }
+    #mobile{
+        display: inline;
+        width:100%;
+        border-radius: 10px 10px 0 0;
+    }
 }
